@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font: normal 18px 'Open Sans', sans-serif;
+    /* background: #fafafa; */
+    color: #333;
+}
+
+main {
+    min-height: 100vh;
+}
+
+header {
+    /* background: white; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+    h1{
+        font: normal 3.5em 'Playfair Display SC', serif;
+        text-align:center;
+        color: #CC8F00;
+    }
+
+    nav {
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+        .button {
+          background-color: #CC8F00;
+          margin-inline: auto;
+          padding: 1em 2em;
+          border: none;
+          border-radius: 5px;
+          font-weight: bold;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          cursor: pointer;
+          color: white;
+          transition: all 1000ms;
+          font-size: 15px;
+          position: relative;
+          overflow: hidden;
+          outline: 2px solid #CC8F00;
+        }
+        
+        .button:hover {
+          color: white;
+          transform: scale(1.1);
+          outline: 2px solid #CC8F00;
+          box-shadow: 4px 5px 17px -4px #CC8F00;
+        }
+        
+        button::before {
+          content: "";
+          position: absolute;
+          left: -50px;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background-color: #ffffff;
+          transform: skewX(45deg);
+          z-index: -1;
+          transition: width 1000ms;
+        }
+
+
+/* Hero Secrion */
+
+.section-hero {
+  background-color: #ffffff;
+  padding: 4rem 0 9.6rem 0;
+}
+
+.hero {
+  /* We'll not use px to define the length and will use rem. */
+  /* max-width: 1300px; */
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  align-items: center;
+  gap: 0 9.6rem;
+}
+
+.heading-primary {
+  font-size: 2.8rem;
+  color: #CC8F00;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 2.8rem;
+}
+
+.hero-img-box {
+  grid-column: 2/3;
+  grid-row: 1 / 3;
+}
+
+.hero-img {
+  width: 107%;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+.image2 {
+  position: absolute;
+  top: 32%;
+  left: 24%;
+  scale: 1;
+}
+
+.has-floating-animation {
+  animation: float-up-down 2s ease-in-out infinite both;
+}
+
+@-webkit-keyframes float-up-down {
+  0% {
+      -webkit-transform:translateY(0)
+  }
+
+  50% {
+      -webkit-transform: translateY(-12%);
+      transform:translateY(-12%)
+  }
+
+  100% {
+      -webkit-transform: translateY(0);
+      transform:translateY(0)
+  }
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  /* margin-top: 4.8rem; */
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+
+  transition: background-color 500ms;
+}
+
+.btn--fill:link,
+.btn--fill:visited {
+  background-color: #CC8F00;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #555;
+  background-color: #fff;
+}
+
+.btn--fill:hover,
+.btn--fill:active {
+  background-color: #f5ab00;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /* Now we'll not use border as in border the outlines are on the outside. Instead we'll use the outline or box-shadow property */
+  box-shadow: inset 0px 0px 0px 3px #fff;
+  text-decoration: underline;
+  /* outline: #fff solid 3px; */
+}
+
+/* We'll create a utility class that can be used for any element by simply adding a class. */
+.margin-right-btn {
+  margin-right: 2.4rem;
+}
+
